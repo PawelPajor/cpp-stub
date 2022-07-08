@@ -1,4 +1,5 @@
 file(GLOB_RECURSE SRC *.cpp *.hpp)
 set(TEST_APP ${PROJECT_NAME}-test)
 add_executable(${TEST_APP} ${SRC})
-target_link_libraries(${TEST_APP} ${PROJECT_NAME})
+link_directories(${CONAN_LIB_DIRS_CATCH2})
+target_link_libraries(${TEST_APP} ${PROJECT_NAME} Catch2Main Catch2)
