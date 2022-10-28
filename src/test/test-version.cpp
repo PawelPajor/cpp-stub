@@ -1,16 +1,15 @@
 #include <catch2/catch_all.hpp>
 #include <regex>
-#include <sstream>
 #include <version.hpp>
 
-using namespace stub;
-using namespace std;
+namespace stub {
 
 TEST_CASE("version", "[lib]") {
-  stringstream stream;
+  std::stringstream stream;
   stream << version::current();
   const auto version = stream.str();
   REQUIRE(regex_match(
       version,
-      regex(R"([0-9]+\.[0-9]+\.[0-9]{8}\.[0-9]{6})")));
+      std::regex(R"([0-9]+\.[0-9]+\.[0-9]{8}\.[0-9]{6})")));
+}
 }

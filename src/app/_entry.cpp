@@ -1,11 +1,6 @@
-#include <iostream>
-#include <version.hpp>
+#include <cli.hpp>
 
-int main() {
-
-  using namespace std;
-  using namespace stub;
-
-  cout << version::current() << endl;
-  return 0;
+int main(int argc, const char** argv) {
+  stub::cli cli;
+  return cli.parse(argc, argv);
 }
