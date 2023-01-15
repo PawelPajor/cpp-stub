@@ -1,6 +1,5 @@
-#include <cli.hpp>
+#include <parse_args.hpp>
 
 int main(int argc, const char** argv) {
-  stub::cli cli;
-  return cli.parse(argc, argv);
+  return stub::parse_args(argc, argv);
 }

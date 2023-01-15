@@ -16,10 +16,7 @@ The dependencies are managed by [conan](https://conan.io). Before compilation:
 - ensure that you have [conan](https://conan.io) installed
 - install all the dependencies to appropriate directories. For example if you are using CLion you will:
   ```
-  conan install --install-folder cmake-build-debug .
-  conan install --install-folder cmake-build-release .
+  conan install --install-folder cmake-build-debug . --build=missing
+  conan install --install-folder cmake-build-release . --build=missing
   ```
-  If conan can't find pre-built binaries you need to build them (once), like this:
-  ```
-  conan install --install-folder cmake-build-debug . --build=catch2
-  ```
+  
