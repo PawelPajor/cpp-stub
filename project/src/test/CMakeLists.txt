@@ -1,0 +1,5 @@
+file(GLOB_RECURSE SRC *.cpp *.hpp)
+set(TEST_APP ${PROJECT_NAME}-test)
+find_package(gtest REQUIRED)
+add_executable(${TEST_APP} ${SRC})
+target_link_libraries(${TEST_APP} ${PROJECT_NAME} gtest::gtest)
