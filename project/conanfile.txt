@@ -1,6 +1,5 @@
 [requires]
 cli11/2.3.0
-gtest/cci.20210126
 nlohmann_json/3.11.2
 
 [generators]
