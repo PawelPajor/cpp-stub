@@ -4,7 +4,7 @@
 namespace stub {
 
 version version::current() {
-  return version{LIB_VERSION_MAJOR, LIB_VERSION_MAJOR, XSTR(DATESTAMP), XSTR(TIMESTAMP)};
+  return version{LIB_VERSION_MAJOR, LIB_VERSION_MINOR, XSTR(DATESTAMP), XSTR(TIMESTAMP)};
 }
 
 std::ostream &operator<<(std::ostream &os, const version &version) {
