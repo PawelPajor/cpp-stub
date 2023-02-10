@@ -10,6 +10,7 @@ struct version  {
   const char *datestamp;
   const char *timestamp;
 
+  std::string str() const;
   static version current();
   friend std::ostream &operator<<(std::ostream &os, const version &version);
 };

@@ -1,3 +1,4 @@
+#include <sstream>
 #include "version.hpp"
 #include "stringify.h"
 
@@ -12,5 +13,11 @@ std::ostream &operator<<(std::ostream &os, const version &version) {
      << '.' << version.minor
      << '.' << version.datestamp
      << '.' << version.timestamp;
+}
+
+std::string version::str() const {
+  std::stringstream stream;
+  stream << *this;
+  return stream.str();
 }
 }
